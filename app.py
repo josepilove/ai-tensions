@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()  # This should be at the very beginning to load environment variables
+
 from flask import Flask, render_template
 from config.config import SECRET_KEY
 from routes.main import main
