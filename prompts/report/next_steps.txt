@@ -1,0 +1,173 @@
+# Next Steps Prompt
+Based on the overall analysis of the organization's AI approach:
+{formatted_vote_data}
+
+Company Name: {company}
+Industry: {industry}
+How they're thinking about using AI: {ai_usage}
+
+Instructions: Considering the organization's AI approach as reflected in the tension balances, and aligning with TUG's services and expertise, provide 5 recommended next steps. Each recommendation should be actionable, specific to the organization's needs, and tied to TUG's offerings in AI strategy, implementation, and ethical governance.
+
+Output Format:
+
+[TUG-aligned recommendation 1]: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
+[TUG-aligned recommendation 2]: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
+[TUG-aligned recommendation 3]: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
+[TUG-aligned recommendation 4]: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
+[TUG-aligned recommendation 5]: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
+
+Conclude with a brief paragraph (2-3 sentences) summarizing how TUG's expertise aligns with the organization's needs based on their tension balances, emphasizing the value of partnership in achieving their AI goals.
+
+TUG Offerings:
+ - Gen AI CoE: Complexity Sherpas
+Unlocking the Power of Generative AI with a Center of Excellence
+Generative AI offers transformative potential, but many organizations struggle to
+implement it effectively and responsibly. This oen leads to wasted resources,
+missed opportunities, and increased risk.
+TUG's Generative AI Center of Excellence (GAI CoE) offering addresses these
+challenges by:
+● Aligning AI initiatives with your strategic business goals
+● Establishing governance for responsible and safe AI use
+● Accelerating organization-wide AI adoption and innovation
+● Mitigating risks associated with uncontrolled AI implementation
+Our approach helps organizations turn Generative AI from a complex challenge
+into a strategic asset, driving tangible business value while upholding ethical
+standards.
+By partnering with TUG to establish your GAI CoE, you position your
+organization to leverage AI effectively, responsibly, and competitively in today's
+rapidly evolving market.
+
+Introducing the Generative AI Center of Excellence:
+A Center of Excellence, CoE, is a group acting as an internal hub supporting practice, methods, and tools.
+The GAI CoE will act as a central hub for:
+● Strategic Guidance: Define clear use cases, guidelines, and policies and develop a roadmap for
+the responsible and ethical implementation of Generative AI across the company.
+● Technical Expertise: Assemble a team of experts to curate and implement best-in-class AI
+models, tools, and frameworks.
+● Knowledge Sharing: Create a collaborative platform for knowledge transfer, fostering a culture
+of innovation and continuous learning.
+● Ethical Alignment: Develop and apply your AI ethics framework to increase alignment between
+your team members, stakeholders, and AI systems.
+● Risk Mitigation and Governance: Establish robust governance processes, ensuring compliance
+with ethical and legal guidelines.
+● Business Value Acceleration: Identify and prioritize opportunities for leveraging Generative AI
+to drive tangible business results.
+GAI CoE benefits include:
+● Amplified Training: Maximize your training by amplifying its effectiveness through
+reinforcement, engagement, and community.
+● Accelerated Innovation: Identify and unlock new opportunities for using this new technology.
+● Leveraged Local Experience: Benefit from the experience of actual users within your
+organization by ensuring lessons learned and best practices are shared while potential traps
+are avoided.
+● Accelerated Expertise: A community of experts is the most effective way to introduce new
+users to what practices and processes work best for their needs, as well as support for written
+guidelines and policies.
+● Effective Communication and Collaboration: The GAI CoE will be a crucial bridge between
+users and leadership, ensuring a smooth flow of information, feedback, and ideas. This fosters
+a collaborative environment where user needs and strategic direction are effectively aligned,
+maximizing the impact of generative AI while managing risk.
+A Generative AI Center of Excellence is your strategic hub for harnessing AI's potential responsibly and
+effectively. It aligns your AI initiatives with business goals, fosters innovation, and mitigates risks.
+TUG's expertise in making the complex clear uniquely positions us to guide your organization in
+building a GAI CoE that drives tangible results.
+Contact TUG to discuss how we can partner to
+build a competitive advantage through an AI CoE.
+
+- Complexity Sherpas (Fractional Chief AI Officer):
+Your Chief AI Office / Team of Experts At Your Service
+AI will transform how work gets done across every facet of your company, if not today then tomorrow.
+No one knows how fast things will change, but already AI has advanced to the point where some teams
+are doubling and tripling their productivity by integrating AI into their workflows.
+The seeds of change are there, but it is not simple or easy to leverage AI.
+With AI, more so than most technologies, peak success relies on people working together in new ways to
+access and leverage your organizationʼs unique experience, knowledge, and data. Working across
+boundaries and low data maturity is always a big challenge. With AI the journey is akin to climbing a
+mountain with weather that changes by the hour!
+You need to prepare, train, and journey with expert guidance. You need a complexity sherpa.
+Like a sherpa helps mountaineers climb the Himalayas, The Understanding Group (TUG) will guide you
+on your AI journey. Weʼll prepare you, train you, and set a pace for the journey that youʼre able to absorb.
+Weʼll serve as your own Chief AI Officer guiding you on your way and delivering:
+● AI Readiness Assessment establishing your current baseline.
+● Workshops that educate your team on how AI can amplify how work gets done.
+● Shared Vision across your team for how AI can serve your strategic objectives
+● Governance, ROI Tracking, Compliance, and Risk policies that are aligned with your culture
+● Objective SWOT analysis of your strengths and weaknesses, opportunities/ROI and threats
+● A Playbook that prioritizes how to fulfill opportunities and manage threats
+We offer three basic paths depending on where you are now with your journey:
+♦—Slow: You know AI is coming and need to get started on the journey
+♦♦—Moderate: Youʼve started exploring AI and want to start deploying solutions soon.
+♦♦♦—Accelerated: Youʼre ready to go and want to implement solutions ASAP
+Most companies will achieve immediate ROI from employee productivity improvements. But the real
+wins come from integrating AI into systems and workflows, and the time to achieve this depends on
+where youʼre starting from and the pace you choose for the journey.
+Start your journey with a Readiness Assessment (starting at $3,000). Monthly guidance starts at $1,000/month.
+
+- AI Services Overview:
+Harness AI's Power. Expand Human Potential.
+TUG empowers mission-driven leaders to ethically integrate AI,
+practically amplifying impact without compromising values.
+Effective AI implementation requires clarity of intentions, workflows, and
+data. TUG delivers this clarity through a proven process that prioritizes
+people and processes over technology alone. TUG brings organizational
+clarity and alignment to the problems that need to be solved, the
+processes where those problems are located, and the data needed to
+solve the problems. This approach sets the stage for successful AI
+adoption, avoiding the pitfalls of siloed, technology-first approaches and
+making the difference between success and failure.
+
+How TUG Helps You Deploy AI Responsibly
+TUG integrates AI into your work with an end-to-end process delivering a
+custom, turnkey AI solution that solves tangible problems.
+TUG delivers generative AI-augmented workflows that fit into existing processes and solves major
+pain points for the people performing those tasks today. The delivered solutions include prompts,
+inputs, and AI-guided workflows built to solve a specific need.
+TUG enables scaled AI adoption by
+building your organizationʼs capacity to
+effectively define, implement, and
+communicate about ways to use AI.
+TUG delivers models tailored to your
+organization's processes, data, and business
+intentions to serve as accessible frameworks for
+aligning teams. These models clarify what should
+be built, how integrations fit together, and
+highlight the people and process considerations
+crucial for technologists to create meaningful AI solutions.
+TUG trains your team how to integrate AI ethically and safely, preserving the
+necessary quality and humanity of your existing processes while scaling output.
+TUG delivers a comprehensive series of workshops
+covering AI fundamentals with hands-on experience,
+and ethical AI governance that will equip your teams
+with the knowledge and skills needed for responsible
+and effective AI integration.
+clarity@understandinggroup.com August 2024
+
+What it's like to work with TUG
+TUG always begins by determining what needs to be done before determining
+how to do it. Every project with TUG follows a simple but effective pattern: Align
+on a Good Outcome, Understand the Real Problem, and Create a Good Solution.
+Aligning on a Good Outcome
+You can expect facilitated sessions to elicit, clarify, and align on what you want from AI. These
+can be broad discussions, defining a holistic AI strategy, or narrow, focusing on specific
+targets for AI deployment. Visual models throughout will facilitate alignment.
+Deliverables: A tangible, shared understanding amongst all stakeholders—of what needs to
+happen, why it is important, who will be affected, and what a successful outcome looks
+like—this streamlines decision-making and communication. In the end, your leadership will
+be aligned around what you want and what it means to succeed.
+Understanding the Real Problem
+You can expect facilitated sessions with the people closest to the problems to establish clarity
+around needs and the problem domain. Whether exploring individual workflows or entire
+ecosystems, models help ensure the correct and entire problem is being addressed.
+Deliverables: Alignment across TUG and the people who best know the problem will ensure
+the solution is a good fit. Our modeling is widely regarded for its ability to facilitate a shared
+understanding of a domain. In the end, you will have a set of models that align all parties
+around the unique situation that needs to be solved for your organization.
+Create a Good Solution
+You can expect TUG to develop holistic structures that address the entire problem space. This
+involves creating lightweight prototypes of workflows, data structures, and inputs that are
+easily validated and iterated upon. We produce a series of models and diagrams that outline a
+structured approach for transforming processes and information, ensuring the solution fits
+seamlessly into your organization.
+Deliverables: Models of the proposed solution enable discussion, alignment, and evaluation
+before it is implemented. Once the solution is validated, TUG will facilitate its implementation,
+both technically and through training. In the end, youʼll have solutions aligned with your
+organizationʼs aim, addressing the right problems, and immediately useful to your team.

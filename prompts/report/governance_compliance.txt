@@ -1,0 +1,85 @@
+# Governance and Compliance Prompt
+Here is the organization's desired balance for AI use:
+{formatted_vote_data}
+
+Company Name: {company}
+Industry: {industry}
+How they're thinking about using AI: {ai_usage}
+
+Governance Context:
+# AI Implementation Tradeoffs: Strategic and Governance, Risk, and Compliance (GRC) Implications
+
+This document outlines the key strategic considerations and GRC implications for AI implementation, organized by specific tradeoffs:
+
+1. **"Safe, Comfortable, & Compliant" vs. "Keeping Up with Rapid Pace of Change"**
+   - Develop a framework for assessing and managing risks associated with new AI initiatives
+   - Establish processes for staying informed about and adapting to changing AI regulations
+   - Implement agile governance structures that can adapt to rapid technological changes
+   - Develop compliance processes that are flexible enough to accommodate innovation
+   - Establish ongoing risk assessment procedures for new AI technologies
+2. **"Amplify Output Quantity" vs. "Amplify Output Quality"**
+   - Define quality standards for AI outputs
+   - Implement robust testing and validation processes for AI systems
+   - Establish governance processes for ensuring AI output quality
+   - Develop risk management strategies for high-volume AI outputs
+   - Ensure compliance with industry-specific quality standards for AI-generated content
+3. **"Innovative & Flexible Usage" vs. "Safe, Secure, Compliant, Unbiased Usage"**
+   - Develop a comprehensive data strategy to support AI initiatives
+   - Create strategies for ensuring AI security and compliance
+   - Implement governance structures that encourage innovation while ensuring safety
+   - Develop risk assessment frameworks for new AI use cases
+   - Ensure compliance with data protection and privacy regulations in AI systems
+4. **"Speedy Implementation" vs. "Safe Implementation"**
+   - Determine the optimal speed of AI implementation for different projects
+   - Establish clear guidelines for when to accelerate implementation and when to proceed with caution
+   - Develop governance processes that can accommodate rapid AI deployment
+   - Implement risk management strategies for fast-tracked AI projects
+   - Ensure compliance checks are integrated into accelerated implementation processes
+5. **"Goal: Maximize Reward" vs. "Goal: Minimize Risk"**
+   - Develop a comprehensive AI risk assessment framework
+   - Create strategies for identifying and pursuing high-reward AI opportunities
+   - Establish governance structures for balancing risk and reward in AI projects
+   - Implement robust risk management and monitoring systems for high-reward AI initiatives
+   - Ensure compliance with regulations while pursuing innovative AI applications
+6. **"Short Term Gains" vs. "Long Term Gains"**
+   - Align AI initiatives with both short-term goals and long-term strategic vision
+   - Create a balanced portfolio of AI projects with varying time horizons
+   - Develop governance processes that consider both short-term and long-term impacts
+   - Implement risk management strategies that account for long-term AI implications
+   - Ensure compliance strategies are adaptable to evolving long-term regulatory landscapes
+7. **"Efficient Governance" vs. "Inclusive Governance"**
+   - Design an AI governance structure that balances efficiency with inclusivity
+   - Establish processes for ethical review and decision-making in AI development
+   - Implement governance structures that are both efficient and inclusive
+   - Develop risk assessment processes that incorporate diverse perspectives
+   - Ensure compliance processes are transparent and accessible to all stakeholders
+8. **"Maximize Reward" vs. "Uphold Organization's Ethical Principles"**
+   - Create a clear set of ethical principles to guide AI development and use
+   - Develop strategies for aligning AI initiatives with corporate social responsibility goals
+   - Establish governance processes that integrate ethical considerations
+   - Implement risk management strategies that account for reputational and ethical risks
+   - Ensure compliance with both legal requirements and ethical standards in AI development
+9. **"Human Flourishing" vs. "Nature Flourishing"**
+   - Assess the environmental impact of AI initiatives
+   - Identify opportunities for AI to contribute to environmental sustainability
+   - Develop governance structures that consider both human and environmental impacts
+   - Implement risk management strategies for potential environmental effects of AI
+   - Ensure compliance with environmental regulations in AI development and deployment
+General Strategic and GRC Implications:
+- Establish clear roles and responsibilities for AI oversight within the organization
+- Develop comprehensive AI policies and procedures
+- Implement ongoing monitoring and auditing processes for AI systems
+- Ensure transparency and explainability in AI decision-making processes
+- Develop strategies for managing AI-related intellectual property
+- Create processes for ongoing stakeholder engagement and communication
+
+By addressing these strategic and GRC implications, organizations can develop a comprehensive approach to AI implementation that balances innovation with responsible governance, effective risk management, and robust compliance.
+
+Instructions: Given the organization's approach to AI as reflected in the tension balances, outline 3 priority areas for governance and compliance. Consider both internal processes and external regulatory landscapes.
+
+Output Format:
+    [Governance/Compliance Priority 1]: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
+    [Governance/Compliance Priority 2]: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
+    [Governance/Compliance Priority 3]: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
+
+Ensure that each priority area is directly linked to the organization's tension balances and overall AI approach. Provide some insight into what the organization should focus on with regard to GRC that is more nuanced and insightful than reflecting back how they balanced these tensions. 

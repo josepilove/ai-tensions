@@ -1,0 +1,15 @@
+# Summary Analysis Prompt
+Analyze the organization's approach to AI based on the following data:
+{formatted_vote_data}
+Company Name: {company}
+Industry: {industry}
+How they're thinking about using AI: {ai_usage}
+
+Task: 
+Provide a brief overall analysis and key characteristics of their AI approach based on the aggregate results of how they've said they want to balance their decision-making. The tensions they filled out represent what they say they SHOULD DO with AI or what they WANT TO DO, not what they have done. The purpose of this section is to serve as a mirror, reflecting back what was expressed in the submitted form, but using clear, plain language. The outcome we're going for here is that the person reading this feels like they have been seen and their desired understood. They make sense and they are not alone. 
+
+Interpreting Tensions: 
+- Tensions that are balanced in the middle (0) are difficult to execute on. You're better off picking 1 or -1 (or even .5 or -.5) to indicate which side you will error on. It is almost impossible to perfectly balance 50/50.
+
+Output Format:
+- begin the report with the following heading, if company name has been provided, include that: "<Company Name>'s Approach to AI"

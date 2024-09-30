@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tensions Analysis Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #report section{
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="bg-white shadow-xl rounded-lg p-8 max-w-4xl w-full">
+        <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">AI Tensions Analysis Report</h1>
+        
+        <section id="inputs" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-700">Inputs</h2>
+            <button class="collapsible mb-2 text-blue-600 hover:text-blue-800 focus:outline-none">open/close</button>
+            <div class="content hidden">
+                <div class="tension-sliders space-y-4">
+                    {% for i in range(1, 10) %}
+                        <div class="tension-slider">
+                            <label class="flex flex-col space-y-2">
+                                <div class="flex justify-between text-sm text-gray-600">
+                                    <span>{{ tensions[i-1].split(' vs. ')[0] }}</span>
+                                    <span>{{ tensions[i-1].split(' vs. ')[1] }}</span>
+                                </div>
+                                <input type="range" name="tension{{ i }}" min="1" max="11" value="{{ vote_data['tension_' ~ i]}}" disabled class="w-full">
+                                <!--
+                                <div class="flex justify-between text-sm text-gray-600">
+                                    <span>Original value: {{ vote_data['tension_' ~ i] }}</span>
+                                    <span>Human-readable value: {{ human_readable_data['tension_' ~ i] }}</span>
+                                </div>
+                                -->
+                            </label>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="text-inputs mt-6 space-y-4">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address:</label>
+                        <input type="text" id="email" name="email" value="{{ vote_data.email }}" readonly class="mt-1 block w-full rounded-md border-gray-300 bg-gray-100 shadow-sm">
+                    </div>
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700">Company Name:</label>
+                        <input type="text" id="company" name="company" value="{{ vote_data.company }}" readonly class="mt-1 block w-full rounded-md border-gray-300 bg-gray-100 shadow-sm">
+                    </div>
+                    <div>
+                        <label for="industry" class="block text-sm font-medium text-gray-700">Industry:</label>
+                        <input type="text" id="industry" name="industry" value="{{ vote_data.industry }}" readonly class="mt-1 block w-full rounded-md border-gray-300 bg-gray-100 shadow-sm">
+                    </div>
+                    <div>
+                        <label for="ai-usage" class="block text-sm font-medium text-gray-700">How you're thinking about using AI:</label>
+                        <textarea id="ai-usage" name="ai-usage" readonly class="mt-1 block w-full rounded-md border-gray-300 bg-gray-100 shadow-sm">{{ vote_data['ai-usage'] }}</textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <p class="mb-4 text-gray-600">Click the button below to generate your custom AI Tensions Analysis Report.</p>
+        <button id="generate-report" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Generate My Custom Report</button>
+
+        <div id="loading" class="loading hidden mt-4 text-center">
+            <div class="spinner inline-block w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+            <p class="mt-2 text-gray-600">Generating your AI Tensions Analysis Report...</p>
+        </div>
+        
+        <section id="report" class="mt-8"></section>
+        <div id="error-message" class="mt-4 text-red-600 hidden"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateReportButton = document.getElementById('generate-report');
+            const loading = document.getElementById('loading');
+            const errorMessage = document.getElementById('error-message');
+
+            generateReportButton.addEventListener('click', function() {
+                loading.classList.remove('hidden');
+                generateReportButton.disabled = true;
+                errorMessage.classList.add('hidden');
+
+                fetch('/generate_report', {
+                    method: 'POST',
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    loading.classList.add('hidden');
+                    generateReportButton.disabled = false;
+                    if (data.report) {
+                        document.getElementById('report').innerHTML = data.report.final_report;
+                        generateReportButton.style.display = 'none';
+                    } else if (data.error) {
+                        throw new Error(data.error);
+                    } else {
+                        throw new Error('Unknown error occurred');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    loading.classList.add('hidden');
+                    generateReportButton.disabled = false;
+                    errorMessage.textContent = `Error generating report: ${error.message}`;
+                    errorMessage.classList.remove('hidden');
+                });
+            });
+
+            // Add click event to collapsible sections
+            const collapsibles = document.querySelectorAll('.collapsible');
+            collapsibles.forEach(collapsible => {
+                collapsible.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                        content.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

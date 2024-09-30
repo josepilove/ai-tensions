@@ -1,0 +1,16 @@
+# Strategic Considerations Prompt
+Here is the organization's desired balance for AI use:
+{formatted_vote_data}
+
+Company Name: {company}
+Industry: {industry}
+How they're thinking about using AI: {ai_usage}
+
+Instructions: Based on the given tension balances, identify 3 key strategic considerations for the organization's AI implementation. Each consideration should directly relate to one or more of the tension balances and provide actionable insight.
+
+Output Format:
+[Strategic Consideration 1]: Brief explanation (2-3 sentences) linking to relevant tensions.
+[Strategic Consideration 2]: Brief explanation (2-3 sentences) linking to relevant tensions.
+[Strategic Consideration 3]: Brief explanation (2-3 sentences) linking to relevant tensions.
+
+Ensure each consideration is concrete and actionable, providing clear guidance for the organization's AI strategy.

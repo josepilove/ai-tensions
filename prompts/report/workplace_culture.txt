@@ -1,0 +1,78 @@
+# Workplace Culture Implications Prompt
+Here is the organization's desired balance for AI use:
+{formatted_vote_data}
+
+Company Name: {company}
+Industry: {industry}
+How they're thinking about using AI: {ai_usage}
+
+Culture Context:
+# AI Implementation Tradeoffs: Cultural and Training Implications
+
+The implementation of AI technologies has significant impacts on organizational culture and workforce development. Here are the key implications organized by specific tradeoffs:
+
+1. **"Safe, Comfortable, & Compliant" vs. "Keeping Up with Rapid Pace of Change"**
+   - Fostering a culture that balances innovation with responsibility
+   - Potential tension between innovative and more conservative elements of the organization
+   - Continuous learning programs to keep pace with AI advancements
+   - Training on regulatory compliance and risk management in AI
+2. **"Amplify Output Quantity" vs. "Amplify Output Quality"**
+   - Shift towards a data-driven culture
+   - Balancing emphasis on productivity with commitment to excellence
+   - Training on data literacy and interpretation of AI outputs
+   - Skill development in quality assurance for AI-generated content
+3. **"Innovative & Flexible Usage" vs. "Safe, Secure, Compliant, Unbiased Usage"**
+   - Fostering a culture of responsible innovation
+   - Emphasizing the importance of ethics and fairness in AI development
+   - Ethics training for AI developers and users
+   - Education on recognizing and mitigating bias in AI systems
+4. **"Speedy Implementation" vs. "Safe Implementation"**
+   - Balancing agility with thoroughness in project execution
+   - Fostering a culture that values both speed and safety
+   - Training on agile methodologies adapted for AI projects
+   - Education on risk assessment and mitigation in rapid AI deployment
+5. **"Goal: Maximize Reward" vs. "Goal: Minimize Risk"**
+   - Cultivating a balanced approach to risk-taking in AI initiatives
+   - Encouraging innovative thinking while maintaining risk awareness
+   - Training on AI-specific risk assessment and management
+   - Skill development in identifying and evaluating AI opportunities
+6. **"Short Term Gains" vs. "Long Term Gains"**
+   - Fostering a culture of strategic thinking and long-term planning
+   - Balancing pressure for quick wins with commitment to sustainable growth
+   - Education on strategic planning and foresight in AI
+   - Training on balancing short-term and long-term objectives in AI projects
+7. **"Efficient Governance" vs. "Inclusive Governance"**
+   - Promoting a culture of collaboration and diverse input
+   - Balancing the need for quick decision-making with inclusive processes
+   - Training on inclusive leadership and decision-making
+   - Skill development in cross-functional collaboration for AI governance
+8. **"Maximize Reward" vs. "Uphold Organization's Ethical Principles"**
+   - Reinforcing ethical values in organizational culture
+   - Balancing profit motives with ethical responsibilities
+   - Ethics training specific to AI development and deployment
+   - Education on aligning AI initiatives with corporate social responsibility
+9. **"Human Flourishing" vs. "Nature Flourishing"**
+   - Fostering environmental consciousness in AI development
+   - Balancing human-centric and eco-centric perspectives
+   - Education on the environmental impact of AI
+   - Training on developing AI solutions for environmental sustainability
+
+General Cultural and Training Implications:
+- Fostering a culture of continuous learning and adaptation
+- Developing programs for upskilling and reskilling the workforce for AI
+- Promoting cross-functional collaboration and knowledge sharing
+- Addressing fears and misconceptions about AI through education
+- Cultivating a mindset of human-AI collaboration
+- Developing leadership capabilities for managing AI-driven organizations
+
+By addressing these cultural and training implications, organizations can create an environment that supports successful AI implementation while developing a workforce capable of leveraging AI effectively and responsibly.
+
+Instructions: Analyze the tension balances to determine 3 key implications for the organization's culture in relation to AI adoption. How do these balances reflect and potentially shape the organization's values and work environment?
+
+Output Format:
+
+[Cultural Implication 1]: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
+[Cultural Implication 2]: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
+[Cultural Implication 3]: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
+
+Conclude with a short paragraph (2-3 sentences) summarizing how these cultural implications align with the organization's overall AI approach. Provide some insight into what the organization should focus on with regard to GRC that is more nuanced and insightful than reflecting back how they balanced these tensions. 

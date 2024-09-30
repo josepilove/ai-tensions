@@ -1,0 +1,17 @@
+# Workforce Training Prompt
+Here is the organization's desired balance for AI use:
+{formatted_vote_data}
+
+Company Name: {company}
+Industry: {industry}
+How they're thinking about using AI: {ai_usage}
+
+Instructions: Based on the AI approach indicated by the tension balances, identify 3 critical talent and training needs for the organization. How can the organization build the capabilities needed to execute its AI strategy effectively?
+
+Output Format:
+
+[Talent/Training Need 1]: Description of the need (1-2 sentences) and its importance in the context of the tension balances.
+[Talent/Training Need 2]: Description of the need (1-2 sentences) and its importance in the context of the tension balances.
+[Talent/Training Need 3]: Description of the need (1-2 sentences) and its importance in the context of the tension balances.
+
+Conclude with a brief recommendation (2-3 sentences) on how the organization might approach addressing these needs, considering its overall AI strategy.

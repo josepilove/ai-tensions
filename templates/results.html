@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>AI Tensions Voting</h1>
+    <form id="voting-form">
+        {% for tension in tensions %}
+        <div class="tension-item">
+            <label for="{{ tension }}">{{ tension }}</label>
+            <input type="range" id="{{ tension }}" name="{{ tension }}" min="0" max="10" value="5">
+            <span class="slider-value">5</span>
+        </div>
+        {% endfor %}
+        <input type="file" name="pdf_file" accept=".pdf" required>
+        <button type="submit">Submit Vote</button>
+    </form>
+
+    <div id="vote-summary"></div>
+
+    <div id="loading" style="display: none;">
+        <p>Processing your vote and generating AI analysis...</p>
+        <!-- Add a loading spinner or animation here if desired -->
+    </div>
+
+    <div id="result" style="display: none;"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
