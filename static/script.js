@@ -55,8 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Scroll to the report
                 reportContainer.scrollIntoView({ behavior: 'smooth' });
             } else {
-                progressBar.style.width = data.progress + '%';
-                progressText.textContent = data.status;
+                const progress = Math.min(99, Math.round(data.progress));
+                progressBar.style.width = progress + '%';
+                progressText.textContent = `${data.status} (${progress}%)`;
             }
         };
 

@@ -30,7 +30,8 @@ def get_prompts(vote_data):
         "company": vote_data.get("company", "Not provided"),
         "industry": vote_data.get("industry", "Not provided"),
         "ai_usage": vote_data.get("ai-usage", "Not provided"),
-        "email": vote_data.get("email", "Not provided")
+        "email": vote_data.get("email", "Not provided"),
+        "formatted_vote_data": formatted_vote_data
     }
 
     for section_title, prompt_file in section_index.items():
@@ -38,15 +39,36 @@ def get_prompts(vote_data):
         with open(file_path, "r") as file:
             prompt_template = file.read()
             try:
-                prompts[section_title] = prompt_template.format(
-                    formatted_vote_data=formatted_vote_data,
-                    **default_data
-                )
+                prompts[section_title] = prompt_template.format(**default_data)
             except KeyError as e:
                 print(f"KeyError in {section_title} prompt: {str(e)}")
                 prompts[section_title] = f"Error generating {section_title} prompt: Missing key {str(e)}"
 
     return prompts
+
+def get_editor_prompt(vote_data, report_content):
+    formatted_vote_data = format_votes(vote_data)
+    
+    # Provide default values for missing data
+    default_data = {
+        "company": vote_data.get("company", "Not provided"),
+        "industry": vote_data.get("industry", "Not provided"),
+        "ai_usage": vote_data.get("ai-usage", "Not provided"),
+        "email": vote_data.get("email", "Not provided"),
+        "formatted_vote_data": formatted_vote_data,
+        "report_content": report_content
+    }
+
+    file_path = os.path.join("prompts", "report", "editor_prompt.txt")
+    with open(file_path, "r") as file:
+        prompt_template = file.read()
+        try:
+            editor_prompt = prompt_template.format(**default_data)
+        except KeyError as e:
+            print(f"KeyError in editor prompt: {str(e)}")
+            editor_prompt = f"Error generating editor prompt: Missing key {str(e)}"
+
+    return editor_prompt
 
 def generate_report_with_progress(vote_data):
     formatted_vote_data = format_votes(vote_data)

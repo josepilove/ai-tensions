@@ -1,10 +1,7 @@
 {
   "Summary Analysis": "summary_analysis.txt",
   "Challenges and Opportunities": "challenges_opportunities.txt",
-  "Editor Prompt": "editor_prompt.txt",
   "Governance and Compliance": "governance_compliance.txt",
-  "Next Steps": "next_steps.txt",
-  "Strategic Considerations": "strategic_considerations.txt",
-  "Workforce Training": "workforce_training.txt",
-  "Workplace Culture": "workplace_culture.txt"
+  "Workplace Culture": "workplace_culture.txt",
+  "Next Steps": "next_steps.txt"
 }
