@@ -20,18 +20,18 @@
             <button class="collapsible mb-2 text-blue-600 hover:text-blue-800 focus:outline-none">open/close</button>
             <div class="content hidden">
                 <div class="tension-sliders space-y-4">
-                    {% for i in range(1, 10) %}
+                    {% for tension in tensions %}
                         <div class="tension-slider">
                             <label class="flex flex-col space-y-2">
                                 <div class="flex justify-between text-sm text-gray-600">
-                                    <span>{{ tensions[i-1].split(' vs. ')[0] }}</span>
-                                    <span>{{ tensions[i-1].split(' vs. ')[1] }}</span>
+                                    <span>{{ tension.description.split(' vs. ')[0] }}</span>
+                                    <span>{{ tension.description.split(' vs. ')[1] }}</span>
                                 </div>
-                                <input type="range" name="tension{{ i }}" min="1" max="11" value="{{ vote_data['tension_' ~ i]}}" disabled class="w-full">
+                                <input type="range" name="tension{{ tension.id }}" min="1" max="11" value="{{ vote_data['tension_' ~ tension.id]}}" disabled class="w-full">
                                 <!--
                                 <div class="flex justify-between text-sm text-gray-600">
-                                    <span>Original value: {{ vote_data['tension_' ~ i] }}</span>
-                                    <span>Human-readable value: {{ human_readable_data['tension_' ~ i] }}</span>
+                                    <span>Original value: {{ vote_data['tension_' ~ tension.id] }}</span>
+                                    <span>Human-readable value: {{ human_readable_data['tension_' ~ tension.id] }}</span>
                                 </div>
                                 -->
                             </label>

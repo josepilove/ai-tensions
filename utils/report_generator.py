@@ -2,12 +2,12 @@ from config.config import TENSIONS
 
 def format_votes(vote_data):
     formatted_votes = []
-    tensions = [tension.split(" vs. ") for tension in TENSIONS]
 
-    for i, (left_aim, right_aim) in enumerate(tensions, 1):
-        key = f"tension_{i}"
+    for tension in TENSIONS:
+        key = f"tension_{tension['id']}"
         if key in vote_data:
             value = int(vote_data[key])
+            left_aim, right_aim = tension['description'].split(" vs. ")
             formatted_vote = f"On a scale of -5 to 5, where -5 is as focused on {left_aim} as possible while still doing a bit of {right_aim}, and 5 is as focused on {right_aim} as possible while still doing a bit of {left_aim}, we're operating at {value}."
             formatted_votes.append(formatted_vote)
 
