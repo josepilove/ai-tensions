@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, session, Response, stream_with_context, request, jsonify
 import traceback
 from services.anthropic_service import generate_section_content
-from utils.report_generator import generate_report_with_progress, get_prompts
+from utils.report_generator import generate_report_with_progress, get_prompts, load_section_index
 import json
 
 report = Blueprint('report', __name__)
@@ -15,18 +15,19 @@ def generate_report():
 
         def generate():
             prompts = {}
+            section_index = load_section_index()
             for status, progress in generate_report_with_progress(vote_data):
                 yield f"data: {json.dumps({'status': status, 'progress': progress})}\n\n"
                 if status.startswith("Generating"):
-                    prompt_name = status.split("Generating ")[1].split(" prompt")[0].replace(" ", "_")
-                    prompts[prompt_name] = get_prompts(vote_data)[prompt_name]
+                    section_title = status.split("Generating ")[1].split(" prompt")[0]
+                    prompts[section_title] = get_prompts(vote_data)[section_title]
 
             # Generate the actual report using the prompts
             report_sections = {}
-            for section_name, prompt in prompts.items():
+            for section_title, prompt in prompts.items():
                 section_content = generate_section_content(prompt)
-                report_sections[section_name] = section_content
-                yield f"data: {json.dumps({'status': f'Generated {section_name} section', 'progress': 90})}\n\n"
+                report_sections[section_title] = section_content
+                yield f"data: {json.dumps({'status': f'Generated {section_title} section', 'progress': 90})}\n\n"
 
             # Render the report template with the generated content
             rendered_report = render_template('report_template.html', report_content=report_sections)

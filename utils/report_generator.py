@@ -1,5 +1,7 @@
 from config.config import TENSIONS
 import time
+import json
+import os
 
 def format_votes(vote_data):
     formatted_votes = []
@@ -14,16 +16,14 @@ def format_votes(vote_data):
 
     return "\n".join(formatted_votes)
 
+def load_section_index():
+    with open("prompts/report/section_index.json", "r") as file:
+        return json.load(file)
+
 def get_prompts(vote_data):
     formatted_vote_data = format_votes(vote_data)
     prompts = {}
-    prompt_files = [
-        "summary_analysis",
-        "challenges_opportunities",
-        "workplace_culture",
-        "governance_compliance",
-        "next_steps"
-    ]
+    section_index = load_section_index()
 
     # Provide default values for missing data
     default_data = {
@@ -33,17 +33,18 @@ def get_prompts(vote_data):
         "email": vote_data.get("email", "Not provided")
     }
 
-    for prompt_name in prompt_files:
-        with open(f"prompts/report/{prompt_name}.txt", "r") as file:
+    for section_title, prompt_file in section_index.items():
+        file_path = os.path.join("prompts", "report", prompt_file)
+        with open(file_path, "r") as file:
             prompt_template = file.read()
             try:
-                prompts[prompt_name] = prompt_template.format(
+                prompts[section_title] = prompt_template.format(
                     formatted_vote_data=formatted_vote_data,
                     **default_data
                 )
             except KeyError as e:
-                print(f"KeyError in {prompt_name} prompt: {str(e)}")
-                prompts[prompt_name] = f"Error generating {prompt_name} prompt: Missing key {str(e)}"
+                print(f"KeyError in {section_title} prompt: {str(e)}")
+                prompts[section_title] = f"Error generating {section_title} prompt: Missing key {str(e)}"
 
     return prompts
 
@@ -53,18 +54,12 @@ def generate_report_with_progress(vote_data):
     yield "Formatting vote data...", 0
     time.sleep(1)
     
-    prompt_files = [
-        "summary_analysis",
-        "challenges_opportunities",
-        "workplace_culture",
-        "governance_compliance",
-        "next_steps"
-    ]
-    total_steps = len(prompt_files)
+    section_index = load_section_index()
+    total_steps = len(section_index)
     
-    for i, prompt_name in enumerate(prompt_files):
+    for i, (section_title, _) in enumerate(section_index.items()):
         progress = ((i + 1) / total_steps) * 80  # 80% of progress for generating prompts
-        yield f"Generating {prompt_name.replace('_', ' ')} prompt...", progress
+        yield f"Generating {section_title} prompt...", progress
         time.sleep(1)
     
     yield "Finalizing report...", 90
