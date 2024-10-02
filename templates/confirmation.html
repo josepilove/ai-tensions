@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tensions Analysis Report</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/event-source-polyfill@1.0.31/src/eventsource.min.js"></script>
     <style>
         #report section{
             margin: 10px 0;
+        }
+        .progress-bar {
+            transition: width 0.5s ease-in-out;
         }
     </style>
 </head>
@@ -28,12 +32,6 @@
                                     <span>{{ tension.description.split(' vs. ')[1] }}</span>
                                 </div>
                                 <input type="range" name="tension{{ tension.id }}" min="1" max="11" value="{{ vote_data['tension_' ~ tension.id]}}" disabled class="w-full">
-                                <!--
-                                <div class="flex justify-between text-sm text-gray-600">
-                                    <span>Original value: {{ vote_data['tension_' ~ tension.id] }}</span>
-                                    <span>Human-readable value: {{ human_readable_data['tension_' ~ tension.id] }}</span>
-                                </div>
-                                -->
                             </label>
                         </div>
                     {% endfor %}
@@ -60,11 +58,13 @@
         </section>
 
         <p class="mb-4 text-gray-600">Click the button below to generate your custom AI Tensions Analysis Report.</p>
-        <button id="generate-report" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Generate My Custom Report</button>
+        <button id="generate-report-btn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Generate My Custom Report</button>
 
-        <div id="loading" class="loading hidden mt-4 text-center">
-            <div class="spinner inline-block w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-            <p class="mt-2 text-gray-600">Generating your AI Tensions Analysis Report...</p>
+        <div id="progress-container" class="mt-4 hidden">
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full progress-bar" style="width: 0%"></div>
+            </div>
+            <p id="progress-text" class="mt-2 text-center text-gray-600"></p>
         </div>
         
         <section id="report" class="mt-8"></section>
@@ -73,45 +73,6 @@
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const generateReportButton = document.getElementById('generate-report');
-            const loading = document.getElementById('loading');
-            const errorMessage = document.getElementById('error-message');
-
-            generateReportButton.addEventListener('click', function() {
-                loading.classList.remove('hidden');
-                generateReportButton.disabled = true;
-                errorMessage.classList.add('hidden');
-
-                fetch('/generate_report', {
-                    method: 'POST',
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    loading.classList.add('hidden');
-                    generateReportButton.disabled = false;
-                    if (data.report) {
-                        document.getElementById('report').innerHTML = data.report.final_report;
-                        generateReportButton.style.display = 'none';
-                    } else if (data.error) {
-                        throw new Error(data.error);
-                    } else {
-                        throw new Error('Unknown error occurred');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    loading.classList.add('hidden');
-                    generateReportButton.disabled = false;
-                    errorMessage.textContent = `Error generating report: ${error.message}`;
-                    errorMessage.classList.remove('hidden');
-                });
-            });
-
             // Add click event to collapsible sections
             const collapsibles = document.querySelectorAll('.collapsible');
             collapsibles.forEach(collapsible => {

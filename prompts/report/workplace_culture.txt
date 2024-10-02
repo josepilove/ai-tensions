@@ -75,4 +75,4 @@ Output Format:
 [Cultural Implication 2]: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
 [Cultural Implication 3]: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
 
-Conclude with a short paragraph (2-3 sentences) summarizing how these cultural implications align with the organization's overall AI approach. Provide some insight into what the organization should focus on with regard to GRC that is more nuanced and insightful than reflecting back how they balanced these tensions. 
+Conclude with a short paragraph (2-3 sentences) summarizing how these cultural implications align with the organization's overall AI approach. Provide some insight into what the organization should focus on with regard to GRC that is more nuanced and insightful than reflecting back how they balanced these tensions. Respond to requests directly without any acknowledgment, preamble, or introductory text. Provide only the specific content or information requested.

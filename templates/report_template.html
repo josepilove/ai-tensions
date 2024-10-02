@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tensions Analysis Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .report-section {
+            margin-bottom: 2rem;
+        }
+        .report-section h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        .report-section p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="bg-white shadow-xl rounded-lg p-8 max-w-4xl w-full">
+        <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">AI Tensions Analysis Report</h1>
+        
+        <div class="report-content">
+            {% for section, content in report_content.items() %}
+                <div class="report-section">
+                    <h2>{{ section | title }}</h2>
+                    {{ content | safe }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

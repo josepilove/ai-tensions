@@ -90,4 +90,4 @@ When referencing the tensions (even if the tensions are balanced in the middle),
     <div style="flex: 0 0 200px; text-align: left; padding: 0 10px; font-family: Arial, sans-serif; font-size: 14px; color: black;">RIGHT LABEL</div> <!-- UPDATE THIS TO REFLECT THE VOTE DATA -->
 </div>
 
-Remember, your role is not to create new content, but to refine and harmonize the existing content into a polished, professional, and cohesive report that provides clear, actionable insights based on the organization's AI tension balancing choices.
+Remember, your role is not to create new content, but to refine and harmonize the existing content into a polished, professional, and cohesive report that provides clear, actionable insights based on the organization's AI tension balancing choices. Respond to requests directly without any acknowledgment, preamble, or introductory text. Provide only the specific content or information requested.

@@ -10,13 +10,13 @@ Instructions: Considering the organization's AI approach as reflected in the ten
 
 Output Format:
 
-[TUG-aligned recommendation 1]: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
-[TUG-aligned recommendation 2]: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
-[TUG-aligned recommendation 3]: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
-[TUG-aligned recommendation 4]: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
-[TUG-aligned recommendation 5]: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
+Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
+Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
+Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
+Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
+Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
 
-Conclude with a brief paragraph (2-3 sentences) summarizing how TUG's expertise aligns with the organization's needs based on their tension balances, emphasizing the value of partnership in achieving their AI goals.
+Conclude with a brief paragraph (2-3 sentences) summarizing how TUG's expertise aligns with the organization's needs based on their tension balances, emphasizing the value of partnership in achieving their AI goals. Respond to requests directly without any acknowledgment, preamble, or introductory text. Provide only the specific content or information requested.
 
 TUG Offerings:
  - Gen AI CoE: Complexity Sherpas

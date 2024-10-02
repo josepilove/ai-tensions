@@ -1,4 +1,5 @@
 from config.config import TENSIONS
+import time
 
 def format_votes(vote_data):
     formatted_votes = []
@@ -13,15 +14,14 @@ def format_votes(vote_data):
 
     return "\n".join(formatted_votes)
 
-def get_prompts(formatted_vote_data, vote_data):
+def get_prompts(vote_data):
+    formatted_vote_data = format_votes(vote_data)
     prompts = {}
     prompt_files = [
         "summary_analysis",
         "challenges_opportunities",
-#        "strategic_considerations",
         "workplace_culture",
         "governance_compliance",
-#        "workforce_training",
         "next_steps"
     ]
 
@@ -46,3 +46,29 @@ def get_prompts(formatted_vote_data, vote_data):
                 prompts[prompt_name] = f"Error generating {prompt_name} prompt: Missing key {str(e)}"
 
     return prompts
+
+def generate_report_with_progress(vote_data):
+    formatted_vote_data = format_votes(vote_data)
+    
+    yield "Formatting vote data...", 0
+    time.sleep(1)
+    
+    prompt_files = [
+        "summary_analysis",
+        "challenges_opportunities",
+        "workplace_culture",
+        "governance_compliance",
+        "next_steps"
+    ]
+    total_steps = len(prompt_files)
+    
+    for i, prompt_name in enumerate(prompt_files):
+        progress = ((i + 1) / total_steps) * 80  # 80% of progress for generating prompts
+        yield f"Generating {prompt_name.replace('_', ' ')} prompt...", progress
+        time.sleep(1)
+    
+    yield "Finalizing report...", 90
+    time.sleep(1)
+
+    # The actual report generation is now handled in routes/report.py
+    yield "Report generation complete!", 100
