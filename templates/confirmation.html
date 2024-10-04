@@ -22,7 +22,7 @@
         <section id="inputs" class="mb-8">
             <h2 class="text-2xl font-semibold mb-4 text-gray-700">Inputs</h2>
             <button class="collapsible mb-2 text-blue-600 hover:text-blue-800 focus:outline-none">open/close</button>
-            <div class="content hidden">
+            <div class="content">
                 <div class="tension-sliders space-y-4">
                     {% for tension in tensions %}
                         <div class="tension-slider">
@@ -57,7 +57,7 @@
             </div>
         </section>
 
-        <p class="mb-4 text-gray-600">Click the button below to generate your custom AI Tensions Analysis Report.</p>
+        <p class="mb-4 text-gray-600">Click the button below to generate your custom AI Tensions Analysis Recommendations.</p>
         <button id="generate-report-btn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Generate My Custom Report</button>
 
         <div id="progress-container" class="mt-4 hidden">
