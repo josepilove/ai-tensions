@@ -78,8 +78,8 @@ By addressing these strategic and GRC implications, organizations can develop a 
 Instructions: Given the organization's approach to AI as reflected in the tension balances, outline 3 priority areas for governance and compliance. Consider both internal processes and external regulatory landscapes.
 
 Output Format:
-    [Governance/Compliance Priority 1]: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
-    [Governance/Compliance Priority 2]: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
-    [Governance/Compliance Priority 3]: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
+    Priority: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
+    Priority: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
+    Priority: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of tensions.
 
 Ensure that each priority area is directly linked to the organization's tension balances and overall AI approach. Provide some insight into what the organization should focus on with regard to GRC that is more nuanced and insightful than reflecting back how they balanced these tensions. 
