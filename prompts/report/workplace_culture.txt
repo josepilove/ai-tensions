@@ -67,4 +67,12 @@ General Cultural and Training Implications:
 
 By addressing these cultural and training implications, organizations can create an environment that supports successful AI implementation while developing a workforce capable of leveraging AI effectively and responsibly.
 
-Instructions: Analyze the tension balances to determine 3 key implications for the organization's culture to list in relation to AI adoption. How do these balances reflect and potentially shape the organization's values and work environment? Conclude with a short paragraph (2-3 sentences) summarizing how these cultural implications align with the organization's overall AI approach. Provide some insight into what the organization should focus on with regard to GRC that is more nuanced and insightful than reflecting back how they balanced these tensions. Respond to requests directly without any acknowledgment, preamble, or introductory text. Provide only the specific content or information requested.
+Instructions: Analyze the tension balances to determine 3 key implications for the organization's culture to list in relation to AI adoption. How do these balances reflect and potentially shape the organization's values and work environment?
+
+Output Format:
+
+Priority: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of one or more tensions.
+Priority: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of one or more tensions.
+Priority: Brief description (1-2 sentences) of the implication and need along with its connection to specific balancing of one or more tensions.
+
+Conclude with a short paragraph (2-3 sentences) summarizing how these cultural implications align with the organization's overall AI approach. Provide some insight into what the organization should focus on with regard to GRC that is more nuanced and insightful than reflecting back how they balanced these tensions. Respond to requests directly without any acknowledgment, preamble, or introductory text. Provide only the specific content or information requested.

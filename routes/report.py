@@ -9,9 +9,21 @@ report = Blueprint('report', __name__)
 @report.route('/generate_report', methods=['GET', 'POST'])
 def generate_report():
     try:
-        vote_data = session.get('vote_data', {})
+        session_vote_data = session.get('vote_data', {})
+        vote_data = session_vote_data.get('human_readable', {})
         if not vote_data:
             return render_template('error.html', error="No vote data found in session"), 400
+
+        print("\n--- Vote Data ---")
+        print(json.dumps(vote_data, indent=2))
+        print("--- End of Vote Data ---\n")
+
+        # Ensure text elements are present
+        text_elements = ['company', 'industry', 'ai-usage']
+        for element in text_elements:
+            if element not in vote_data or not vote_data[element]:
+                vote_data[element] = "Not provided"
+                print(f"Warning: {element} is missing or empty in vote_data")
 
         def generate():
             prompts = {}
@@ -31,7 +43,9 @@ def generate_report():
             report_sections = {}
             for section_title, prompt in prompts.items():
                 yield f"data: {json.dumps({'status': f'Generating content for {section_title}', 'progress': min(99, ((current_step + 0.5) / total_steps) * 100)})}\n\n"
-                section_content = generate_section_content(prompt)
+                print(f"\n--- Generating content for {section_title} ---")
+                print(f"Prompt: {prompt[:500]}...")  # Print the first 500 characters of the prompt
+                section_content = generate_section_content(prompt, vote_data)
                 report_sections[section_title] = section_content
                 current_step += 1
                 yield f"data: {json.dumps({'status': f'Generated {section_title} section', 'progress': min(99, (current_step / total_steps) * 100)})}\n\n"

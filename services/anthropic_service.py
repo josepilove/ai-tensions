@@ -20,11 +20,19 @@ def clean_content(content):
     
     return content
 
-def generate_section_content(prompt):
+def generate_section_content(prompt, vote_data):
+    # Perform variable substitution
+    formatted_prompt = prompt.format(**vote_data)
+
+    # Print the formatted prompt to the console
+    print("\n--- Formatted Prompt Sent to Anthropic ---")
+    print(formatted_prompt)
+    print("--- End of Formatted Prompt ---\n")
+
     response = anthropic.messages.create(
         model="claude-3-5-sonnet-20240620",
         messages=[
-            {"role": "user", "content": f"{prompt}\n\nPlease format your response in HTML, using appropriate tags like <p>, <ul>, <li>, etc. for better readability."}
+            {"role": "user", "content": f"{formatted_prompt}\n\nPlease format your response in HTML, using appropriate tags like <p>, <ul>, <li>, etc. for better readability."}
         ],
         max_tokens=1000
     )
