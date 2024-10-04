@@ -25,34 +25,48 @@
             <div class="content">
                 <div class="tension-sliders space-y-4">
                     {% for tension in tensions %}
-                        <div class="tension-slider">
-                            <label class="flex flex-col space-y-2">
-                                <div class="flex justify-between text-sm text-gray-600">
-                                    <span>{{ tension.description.split(' vs. ')[0] }}</span>
-                                    <span>{{ tension.description.split(' vs. ')[1] }}</span>
-                                </div>
-                                <input type="range" name="tension{{ tension.id }}" min="1" max="11" value="{{ vote_data['tension_' ~ tension.id]}}" disabled class="w-full">
-                            </label>
+                        <div class="tension-slider" style="height: 50px;">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 100%; padding: 0;">
+                                <div style="flex: 0 0 200px; text-align: right; padding: 0 10px; font-family: Arial, sans-serif; font-size: 14px; color: black;">{{ tension.description.split(' vs. ')[0] }}</div>
+                                <svg viewBox="0 0 320 20" xmlns="http://www.w3.org/2000/svg" style="flex: 1; max-width: 400px;">
+                                    <!-- Main line -->
+                                    <line x1="10" y1="10" x2="310" y2="10" stroke="black" stroke-width="2"/>
+                                    
+                                    <!-- Tick marks -->
+                                    <g stroke="black" stroke-width="2">
+                                        <line x1="10" y1="0" x2="10" y2="20"/>
+                                        <line x1="40" y1="5" x2="40" y2="15"/>
+                                        <line x1="70" y1="5" x2="70" y2="15"/>
+                                        <line x1="100" y1="5" x2="100" y2="15"/>
+                                        <line x1="130" y1="5" x2="130" y2="15"/>
+                                        <line x1="160" y1="0" x2="160" y2="20"/>
+                                        <line x1="190" y1="5" x2="190" y2="15"/>
+                                        <line x1="220" y1="5" x2="220" y2="15"/>
+                                        <line x1="250" y1="5" x2="250" y2="15"/>
+                                        <line x1="280" y1="5" x2="280" y2="15"/>
+                                        <line x1="310" y1="0" x2="310" y2="20"/>
+                                    </g>
+
+                                    <!-- Green circle (dot) for the selected position -->
+                                    {% set value = vote_data['tension_' ~ tension.id] | int %}
+                                    {% set cx = 10 + (value - 1) * 30 %}
+                                    <circle cx="{{ cx }}" cy="10" r="8" fill="green"/>
+                                </svg>
+                                <div style="flex: 0 0 200px; text-align: left; padding: 0 10px; font-family: Arial, sans-serif; font-size: 14px; color: black;">{{ tension.description.split(' vs. ')[1] }}</div>
+                            </div>
                         </div>
                     {% endfor %}
                 </div>
                 <div class="text-inputs mt-6 space-y-4">
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address:</label>
-                        <input type="text" id="email" name="email" value="{{ vote_data.email }}" readonly class="mt-1 block w-full rounded-md border-gray-300 bg-gray-100 shadow-sm">
-                    </div>
-                    <div>
-                        <label for="company" class="block text-sm font-medium text-gray-700">Company Name:</label>
-                        <input type="text" id="company" name="company" value="{{ vote_data.company }}" readonly class="mt-1 block w-full rounded-md border-gray-300 bg-gray-100 shadow-sm">
-                    </div>
-                    <div>
-                        <label for="industry" class="block text-sm font-medium text-gray-700">Industry:</label>
-                        <input type="text" id="industry" name="industry" value="{{ vote_data.industry }}" readonly class="mt-1 block w-full rounded-md border-gray-300 bg-gray-100 shadow-sm">
-                    </div>
-                    <div>
-                        <label for="ai-usage" class="block text-sm font-medium text-gray-700">How you're thinking about using AI:</label>
-                        <textarea id="ai-usage" name="ai-usage" readonly class="mt-1 block w-full rounded-md border-gray-300 bg-gray-100 shadow-sm">{{ vote_data['ai-usage'] }}</textarea>
-                    </div>
+                    <p class=" text-sm font-medium text-gray-700">
+                        <strong>Email Address: </strong>{{ vote_data.email }}
+                        <br/>
+                        <strong>Company Name: </strong>{{ vote_data.company }}
+                        <br/>
+                        <strong>Industry: </strong>{{ vote_data.industry }}
+                        <br/>
+                        <strong>How you're thinking about using AI: </strong>{{ vote_data['ai-usage'] }}
+                    </p>
                 </div>
             </div>
         </section>
