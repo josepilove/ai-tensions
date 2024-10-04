@@ -10,13 +10,11 @@ Instructions: Considering the organization's AI approach as reflected in the ten
 
 Output Format:
 
-Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
-Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
-Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
-Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
-Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance and how TUG can support it (1-2 sentences).
+Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance in terms of outcomes and how TUG can support it (1-2 sentences).
+Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance in terms of outcomes and how TUG can support it (1-2 sentences).
+Recommendation x: Clear, actionable step (1 sentence) followed by a brief explanation of its importance in terms of outcomes and how TUG can support it (1-2 sentences).
 
-Conclude with a brief paragraph (2-3 sentences) summarizing how TUG's expertise aligns with the organization's needs based on their tension balances, emphasizing the value of partnership in achieving their AI goals. Respond to requests directly without any acknowledgment, preamble, or introductory text. Provide only the specific content or information requested.
+Conclude with a brief paragraph (2-3 sentences) summarizing how TUG's expertise aligns with the organization's needs based on their tension balances, emphasizing the value of partnership in achieving their AI goals. This should be written to the individual who filled out the form and be from the perspective of TUG, an organization that has things figured out and can speak calmly and confidently from a place of knowledge and experience about the situation and some wise next steps. Respond to requests directly without any acknowledgment, preamble, or introductory text. Provide only the specific content or information requested.
 
 TUG Offerings:
  - Gen AI CoE: Complexity Sherpas
