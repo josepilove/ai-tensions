@@ -75,3 +75,17 @@ Opportunities:
 By carefully navigating these challenges and seizing the opportunities, organizations can leverage AI to drive growth, innovation, and positive impact while managing associated risks and ethical considerations.
 
 Task: Adapt these potential challenges and opportunities based on how the tensions are balanced and in the context of the industry/company/what they say they want to do with AI. Provide some insight into what the organization should focus on with regard to GRC that is more nuanced and insightful than reflecting back how they balanced these tensions. Respond to requests directly without any acknowledgment, preamble, or introductory text. Provide only the specific content or information requested.
+
+Output Template:
+<p><strong>Challenges:</strong></p>
+<ul>
+    <li><challenge></li>
+    <li><challenge></li>
+    <li><challenge></li>
+</ul>
+<p><strong>Opportunities:</strong></p>
+<ul>
+    <li><opportunities></li>
+    <li><opportunities></li>
+    <li><opportunities></li>
+</ul>
